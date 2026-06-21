@@ -1,0 +1,445 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "What's up",
+        "How are you",
+        "Is anyone there",
+        "Hi there",
+        "Howdy",
+        "Greetings",
+        "Hey there",
+        "Hello there"
+      ],
+      "responses": [
+        "Hello! Welcome to our customer service. How can I help you today?",
+        "Hi there! I'm here to assist you. What can I do for you?",
+        "Hey! Thanks for reaching out. How may I help you?",
+        "Welcome! I'm your virtual assistant. What do you need help with?",
+        "Hello! Great to have you here. How can I assist you today?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Talk to you later",
+        "I'm leaving",
+        "Have a good day",
+        "See ya",
+        "Catch you later",
+        "I got to go",
+        "That's all",
+        "Thanks bye",
+        "Bye bye",
+        "Good night"
+      ],
+      "responses": [
+        "Goodbye! Have a wonderful day!",
+        "See you later! Don't hesitate to reach out if you need anything.",
+        "Bye! It was great chatting with you. Take care!",
+        "Thanks for chatting! Have a great day ahead!",
+        "Goodbye! We're always here if you need help again."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thanks a lot",
+        "Thank you so much",
+        "I appreciate it",
+        "You're great",
+        "That was helpful",
+        "Thanks for the help",
+        "Much appreciated",
+        "Cheers",
+        "Thanks a bunch",
+        "You've been very helpful"
+      ],
+      "responses": [
+        "You're welcome! Is there anything else I can help with?",
+        "Happy to help! Let me know if you have any other questions.",
+        "Glad I could assist! Anything else on your mind?",
+        "My pleasure! Don't hesitate to ask if you need more help.",
+        "Anytime! I'm here if you need anything else."
+      ]
+    },
+    {
+      "tag": "order_status",
+      "patterns": [
+        "Where is my order",
+        "Check my order status",
+        "What happened to my order",
+        "Has my order shipped",
+        "When will my order arrive",
+        "Order update",
+        "I want to know about my order",
+        "Can you check my order",
+        "What's the status of my order",
+        "Is my order on the way",
+        "I placed an order and want to track it",
+        "Any update on my order"
+      ],
+      "responses": [
+        "I'd be happy to check your order status! Could you please provide your order number?",
+        "Sure! Please share your order ID so I can look it up for you.",
+        "Let me check that for you. What's your order number?",
+        "Of course! I'll need your order number to pull up the details. Could you share it?"
+      ]
+    },
+    {
+      "tag": "track_order",
+      "patterns": [
+        "Track my order",
+        "Where is my package",
+        "Tracking number",
+        "Can I track my delivery",
+        "How do I track my order",
+        "Give me my tracking info",
+        "I need tracking details",
+        "Share tracking link",
+        "Tracking update",
+        "Where is my shipment",
+        "Package tracking",
+        "How to track my parcel"
+      ],
+      "responses": [
+        "You can track your order using the tracking link sent to your email. Need help finding it?",
+        "To track your package, please visit our tracking page and enter your order number. Would you like the link?",
+        "Sure! Once your order ships, you'll receive a tracking number via email. Have you received one?",
+        "I can help with tracking! Please share your order number and I'll get the latest updates for you."
+      ]
+    },
+    {
+      "tag": "cancel_order",
+      "patterns": [
+        "Cancel my order",
+        "I want to cancel",
+        "How do I cancel my order",
+        "Can I cancel",
+        "Cancel order please",
+        "I don't want this order anymore",
+        "Stop my order",
+        "I changed my mind about my order",
+        "Please cancel my purchase",
+        "I need to cancel an order",
+        "How to cancel",
+        "Cancel my recent order"
+      ],
+      "responses": [
+        "I can help you cancel your order. Could you provide the order number? Please note that orders can only be cancelled before they ship.",
+        "Sure, I'll help with the cancellation. What's your order number? Keep in mind there's a cancellation window before shipping.",
+        "I understand you'd like to cancel. Please share your order number and I'll check if it's still eligible for cancellation.",
+        "No problem! Please provide your order ID. If it hasn't shipped yet, we can process the cancellation right away."
+      ]
+    },
+    {
+      "tag": "return_policy",
+      "patterns": [
+        "What is your return policy",
+        "Can I return this",
+        "How do I return",
+        "Return policy",
+        "How long do I have to return",
+        "Return an item",
+        "What are the return conditions",
+        "Is this returnable",
+        "Tell me about returns",
+        "Do you accept returns",
+        "Can I send this back",
+        "Return process"
+      ],
+      "responses": [
+        "Our return policy allows returns within 30 days of delivery. Items must be unused and in original packaging. Would you like to start a return?",
+        "You can return most items within 30 days of purchase. The item should be in its original condition. Want me to walk you through the process?",
+        "We offer a 30-day return window for most products. Some exclusions apply for perishable or personalized items. Do you have a specific item in mind?",
+        "Returns are accepted within 30 days. Items must be unworn, unused, and with tags attached. Need help initiating a return?"
+      ]
+    },
+    {
+      "tag": "refund_request",
+      "patterns": [
+        "I want a refund",
+        "How do I get a refund",
+        "Refund my money",
+        "When will I get my refund",
+        "Process my refund",
+        "I need my money back",
+        "Refund status",
+        "Where is my refund",
+        "How long for refund",
+        "Can I get a refund",
+        "Refund please",
+        "I want my money back"
+      ],
+      "responses": [
+        "I'll help you with the refund process. Once we receive the returned item, refunds are processed within 5-7 business days. Could you share your order number?",
+        "Refunds are typically processed within 5-7 business days after we receive the item. Would you like to check the status of an existing refund?",
+        "I understand you'd like a refund. Please provide your order number so I can look into it. Refunds usually take 5-7 business days to appear in your account.",
+        "Sure! Let me help with that. Refunds are issued to the original payment method within 5-7 business days. What's your order number?"
+      ]
+    },
+    {
+      "tag": "product_info",
+      "patterns": [
+        "Tell me about your products",
+        "What products do you sell",
+        "Do you have",
+        "Product details",
+        "What do you offer",
+        "Show me your products",
+        "Product information",
+        "I'm looking for a product",
+        "What items are available",
+        "Can you recommend a product",
+        "Product catalog",
+        "I need information about a product"
+      ],
+      "responses": [
+        "We offer a wide range of products! Could you tell me what category you're interested in so I can help you better?",
+        "I'd love to help you find the right product! What are you looking for specifically?",
+        "We have a variety of products available. Could you narrow down what you're interested in? I can provide detailed information.",
+        "Sure! Let me know what product or category you're interested in and I'll share all the details."
+      ]
+    },
+    {
+      "tag": "pricing",
+      "patterns": [
+        "How much does it cost",
+        "What's the price",
+        "Pricing",
+        "How much is this",
+        "What are your prices",
+        "Is there a discount",
+        "Do you have any offers",
+        "Price list",
+        "Any deals available",
+        "What's the cost",
+        "Are there any promotions",
+        "Current offers"
+      ],
+      "responses": [
+        "Prices vary by product. Could you tell me which specific item you're interested in?",
+        "I can help with pricing! Which product are you looking at? I'll get you the current price and any available discounts.",
+        "Our prices are competitive and we frequently run promotions. What product would you like pricing for?",
+        "Let me check the pricing for you. Which item or category are you interested in?"
+      ]
+    },
+    {
+      "tag": "shipping_info",
+      "patterns": [
+        "What are the shipping options",
+        "How much is shipping",
+        "Do you offer free shipping",
+        "Shipping cost",
+        "Delivery options",
+        "How do you ship",
+        "What shipping methods are available",
+        "International shipping",
+        "Shipping rates",
+        "Express shipping",
+        "How fast is shipping",
+        "Do you deliver to my area"
+      ],
+      "responses": [
+        "We offer standard shipping (5-7 days) and express shipping (2-3 days). Free shipping is available on orders over $50! What would you like to know more about?",
+        "Shipping options include Standard (5-7 days, $4.99) and Express (2-3 days, $12.99). Orders over $50 qualify for free standard shipping!",
+        "We ship nationwide with multiple options. Standard delivery takes 5-7 business days and express takes 2-3 days. Need shipping to a specific location?",
+        "Great question! We have standard and express shipping. Free shipping on orders above $50. Would you like to know the rates for your area?"
+      ]
+    },
+    {
+      "tag": "delivery_time",
+      "patterns": [
+        "How long does delivery take",
+        "When will I receive my order",
+        "Delivery time",
+        "Estimated delivery",
+        "How many days to deliver",
+        "When can I expect my package",
+        "Delivery estimate",
+        "How fast will my order arrive",
+        "Expected delivery date",
+        "How soon will it get here"
+      ],
+      "responses": [
+        "Standard delivery typically takes 5-7 business days, while express delivery takes 2-3 business days. Which shipping method did you choose?",
+        "Delivery times depend on your location and shipping method. Standard is 5-7 days and express is 2-3 days. Would you like to check on a specific order?",
+        "Most orders arrive within 5-7 business days with standard shipping. Express orders arrive in 2-3 days. Do you have an order number I can check?",
+        "Delivery usually takes 5-7 business days for standard and 2-3 for express. International orders may take 10-15 business days."
+      ]
+    },
+    {
+      "tag": "payment_issues",
+      "patterns": [
+        "My payment failed",
+        "Payment not going through",
+        "Card declined",
+        "I can't make a payment",
+        "Payment error",
+        "Transaction failed",
+        "My payment was charged twice",
+        "Double charged",
+        "Payment problem",
+        "Can't process payment",
+        "Billing issue",
+        "I was overcharged",
+        "Wrong amount charged"
+      ],
+      "responses": [
+        "I'm sorry about the payment issue. Could you describe what happened? I'll do my best to resolve it.",
+        "Let me help with that payment problem. Could you tell me more about the error you're seeing? Also, which payment method are you using?",
+        "Payment issues can be frustrating. Please check that your card details are correct and try again. If the problem persists, I can escalate this to our billing team.",
+        "I apologize for the inconvenience. Let me look into this for you. Could you share your order number or the email associated with your account?"
+      ]
+    },
+    {
+      "tag": "account_help",
+      "patterns": [
+        "I can't log in",
+        "Reset my password",
+        "How do I create an account",
+        "Account problem",
+        "I forgot my password",
+        "Update my account",
+        "Change my email",
+        "Account settings",
+        "Delete my account",
+        "I need help with my account",
+        "How to sign up",
+        "I'm locked out of my account"
+      ],
+      "responses": [
+        "I can help with your account! If you need to reset your password, click 'Forgot Password' on the login page. What specific issue are you facing?",
+        "For account issues, I recommend visiting our account settings page. If you're locked out, you can reset your password via email. Need more help?",
+        "I'd be happy to assist with your account. Could you tell me more about what you need — password reset, email change, or something else?",
+        "Account help is here! For password resets, use the 'Forgot Password' link. For other changes, go to Account Settings. What do you need?"
+      ]
+    },
+    {
+      "tag": "complaint",
+      "patterns": [
+        "I want to complain",
+        "I'm not satisfied",
+        "This is unacceptable",
+        "I'm very unhappy",
+        "Your service is terrible",
+        "Bad experience",
+        "I want to file a complaint",
+        "This is disappointing",
+        "I'm frustrated",
+        "Worst service ever",
+        "I'm not happy with this",
+        "This is not what I expected",
+        "Very poor quality"
+      ],
+      "responses": [
+        "I'm truly sorry to hear about your experience. Your feedback is important to us. Could you share more details so I can help resolve this?",
+        "I sincerely apologize for the inconvenience. Please tell me what went wrong and I'll do my best to make it right.",
+        "I understand your frustration and I'm sorry you had this experience. Could you provide more details? I want to help fix this for you.",
+        "I'm sorry you're not satisfied. We take customer feedback very seriously. Please share what happened and I'll look into it right away."
+      ]
+    },
+    {
+      "tag": "escalate_to_human",
+      "patterns": [
+        "I want to talk to a human",
+        "Connect me to an agent",
+        "I need a real person",
+        "Let me speak to a manager",
+        "Transfer me to support",
+        "I want to talk to someone",
+        "Can I speak to a representative",
+        "Human agent please",
+        "This bot can't help me",
+        "I need human assistance",
+        "Speak to supervisor",
+        "Get me a real agent"
+      ],
+      "responses": [
+        "I understand you'd like to speak with a human agent. Let me transfer you to our support team. Please hold on for a moment.",
+        "Of course! I'll connect you with a live agent right away. Our support team is available Mon-Fri, 9 AM - 6 PM.",
+        "I'll transfer you to a human representative. In the meantime, could you briefly describe your issue so the agent can assist you faster?",
+        "No problem! Let me get a human agent for you. Our team will be with you shortly. Thank you for your patience."
+      ]
+    },
+    {
+      "tag": "hours_of_operation",
+      "patterns": [
+        "What are your hours",
+        "When are you open",
+        "Business hours",
+        "What time do you open",
+        "What time do you close",
+        "Operating hours",
+        "Are you open on weekends",
+        "When is customer service available",
+        "Working hours",
+        "Are you available now",
+        "What are your office hours"
+      ],
+      "responses": [
+        "Our customer service is available Monday to Friday, 9:00 AM to 6:00 PM EST. Our chatbot is available 24/7!",
+        "Business hours are Mon-Fri, 9 AM - 6 PM EST. But don't worry — I'm here around the clock to help you!",
+        "Our live agents are available Monday through Friday, 9 AM to 6 PM EST. I'm available 24/7 for basic inquiries!",
+        "We're open Mon-Fri, 9:00 AM - 6:00 PM EST. Weekend support is limited, but this chatbot never sleeps!"
+      ]
+    },
+    {
+      "tag": "contact_info",
+      "patterns": [
+        "How can I contact you",
+        "What is your phone number",
+        "Email address",
+        "Contact information",
+        "How to reach you",
+        "Your contact details",
+        "Customer service number",
+        "Support email",
+        "How do I get in touch",
+        "Phone number",
+        "What's your email"
+      ],
+      "responses": [
+        "You can reach us at support@example.com or call us at 1-800-555-0199. We're here to help!",
+        "Our contact details: Email — support@example.com | Phone — 1-800-555-0199 | Live Chat — right here!",
+        "Feel free to email us at support@example.com or call 1-800-555-0199 during business hours. How else can I help?",
+        "You can contact us via email at support@example.com, phone at 1-800-555-0199, or continue chatting with me right here!"
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "asdfgh",
+        "random text",
+        "what",
+        "huh",
+        "I don't understand",
+        "blah blah",
+        "testing",
+        "xyz",
+        "something else",
+        "can you help with something different"
+      ],
+      "responses": [
+        "I'm sorry, I didn't quite understand that. Could you rephrase your question?",
+        "I'm not sure I follow. Could you try asking in a different way?",
+        "Hmm, I couldn't understand that. Could you provide more details about what you need help with?",
+        "I apologize, but I'm not sure how to help with that. Could you try asking about orders, returns, shipping, or account issues?",
+        "I didn't catch that. You can ask me about order tracking, returns, shipping, payments, or general support. How can I help?"
+      ]
+    }
+  ]
+}
