@@ -233,7 +233,7 @@ def run_cli():
     # ---- Header banner ----
     print()
     print("+=========================================================+")
-    print("|          CUSTOMER SERVICE CHATBOT                        |")
+    print("|                          ZEUS                           |")
     print("|                                                          |")
     print("|   Type your question and press Enter.                    |")
     print("|   Type 'quit' or 'exit' to end the session.             |")
@@ -246,6 +246,9 @@ def run_cli():
         print("ERROR: Trained model not found!")
         print("Please run  'python model/train.py'  first to train the model.")
         sys.exit(1)
+
+    print("Bot  >>  Hello, I am Zeus, How may I assist you today?")
+    print()
 
     while True:
         try:
@@ -266,6 +269,9 @@ def run_cli():
         print(f"Bot  >>  {result['response']}")
         print(f"         [intent: {result['intent']}  |  confidence: {result['confidence']:.2%}]")
         print()
+        
+        if result.get("action") == "close_session":
+            break
 
 
 # ---------------------------------------------------------------------------
