@@ -677,6 +677,23 @@
       "responses": [
         "Thank you for reaching out! The chat session is now closed. Have a great day!"
       ]
+    },
+    {
+      "tag": "general_order_issue",
+      "patterns": [
+        "issue about my order",
+        "i'd like to report an issue about my order",
+        "i have a problem with my order",
+        "something is wrong with my order",
+        "order issue",
+        "help with my order",
+        "report an order problem",
+        "there is a mistake with my order",
+        "i have a question about my order"
+      ],
+      "responses": [
+        "I can certainly help with your order. Could you tell me more about the issue? For example, is it a missing package, a damaged item, or do you need to cancel or change your order?"
+      ]
     }
   ]
 }
