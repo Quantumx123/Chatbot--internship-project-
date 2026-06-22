@@ -135,6 +135,24 @@ class CustomerServiceBot:
                     "confidence": 1.0,
                 }
 
+        # 1.5. Check if we are waiting for a close decision
+        if self.session_state == "awaiting_close_decision":
+            text_lower = user_input.lower()
+            if any(word in text_lower for word in ["close", "end", "yes", "that's all", "nothing", "no"]):
+                self.session_state = None
+                self.current_intent = None
+                return {
+                    "response": "Thank you for reaching out! The chat session is now closed. Have a great day!",
+                    "intent": "close_session",
+                    "confidence": 1.0,
+                    "action": "close_session"
+                }
+            else:
+                self.session_state = None
+                self.current_intent = None
+                # If they say something else, treat it as a new question
+                # Just drop down to normal intent prediction
+
         # 2. Extract entities immediately in case user provided them upfront
         order_number = self.extract_order_number(user_input)
 
@@ -176,6 +194,14 @@ class CustomerServiceBot:
             else:
                 self.greeted = True
                 response = random.choice(self.responses.get(intent, ["Hello!"]))
+        elif intent == "close_session":
+            response = random.choice(self.responses.get(intent, ["Session closed."]))
+            return {
+                "response": response,
+                "intent": intent,
+                "confidence": round(confidence, 4),
+                "action": "close_session"
+            }
         else:
             response = random.choice(
                 self.responses.get(intent, ["I'm not sure how to help with that."])
@@ -185,6 +211,10 @@ class CustomerServiceBot:
         if "[CONTEXT:awaiting_order_number]" in response:
             response = response.replace("[CONTEXT:awaiting_order_number]", "").strip()
             self.session_state = "awaiting_order_number"
+            self.current_intent = intent
+        elif "[CONTEXT:awaiting_close_decision]" in response:
+            response = response.replace("[CONTEXT:awaiting_close_decision]", "").strip()
+            self.session_state = "awaiting_close_decision"
             self.current_intent = intent
 
         return {

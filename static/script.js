@@ -93,6 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
           intent: data.intent,
           confidence: data.confidence
         });
+
+        if (data.action === "close_session") {
+          userInput.disabled = true;
+          sendBtn.disabled = true;
+          userInput.placeholder = "Chat session ended.";
+        }
       }, 600 + Math.random() * 400); // 600-1000ms delay
 
     } catch (error) {
@@ -111,12 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Welcome message on load
+  // Welcome message  // Initial greeting
   setTimeout(() => {
-    appendMessage('bot', 'Hello! Welcome to our customer service. How can I help you today?', {
+    setTyping(false);
+    appendMessage('bot', 'Hello, I am Zeus, How may I assist you today?', {
       intent: 'greeting',
       confidence: 1.0
     });
-  }, 500);
+  }, 1000);
 
 });

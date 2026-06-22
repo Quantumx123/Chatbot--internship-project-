@@ -9,21 +9,16 @@
         "Good morning",
         "Good afternoon",
         "Good evening",
-        "What's up",
-        "How are you",
         "Is anyone there",
         "Hi there",
-        "Howdy",
         "Greetings",
         "Hey there",
-        "Hello there"
+        "What's up"
       ],
       "responses": [
-        "Hello! Welcome to our customer service. How can I help you today?",
-        "Hi there! I'm here to assist you. What can I do for you?",
-        "Hey! Thanks for reaching out. How may I help you?",
-        "Welcome! I'm your virtual assistant. What do you need help with?",
-        "Hello! Great to have you here. How can I assist you today?"
+        "Hello, I am Zeus, How may I assist you today?",
+        "Hi there! I am Zeus. How can I help you?",
+        "Greetings! I am Zeus, your virtual assistant. What can I do for you today?"
       ]
     },
     {
@@ -647,6 +642,40 @@
         "We typically restock popular items every 2-3 weeks! You can enter your email on the product page to be notified the moment it's back in stock.",
         "If an item is sold out, we highly recommend using the 'Notify Me' button on the product page. We'll email you as soon as it's available again!",
         "Restock dates vary, but you can sign up for back-in-stock email alerts directly on the product page so you don't miss out."
+      ]
+    },
+    {
+      "tag": "acknowledge",
+      "patterns": [
+        "okay",
+        "ok",
+        "got it",
+        "understood",
+        "alright",
+        "makes sense",
+        "sure",
+        "fine",
+        "ok thanks"
+      ],
+      "responses": [
+        "Would you need any more help or would you like to close the chat session? [CONTEXT:awaiting_close_decision]"
+      ]
+    },
+    {
+      "tag": "close_session",
+      "patterns": [
+        "close session",
+        "close the chat",
+        "end chat",
+        "i want to close",
+        "no more help needed",
+        "that's all",
+        "yes close it",
+        "close it",
+        "end session"
+      ],
+      "responses": [
+        "Thank you for reaching out! The chat session is now closed. Have a great day!"
       ]
     }
   ]
