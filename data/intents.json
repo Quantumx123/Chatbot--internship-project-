@@ -90,13 +90,17 @@
         "What's the status of my order",
         "Is my order on the way",
         "I placed an order and want to track it",
-        "Any update on my order"
+        "Any update on my order",
+        "I need help with an order",
+        "Help me with an order",
+        "Can you help me with an order",
+        "Order help"
       ],
       "responses": [
-        "I'd be happy to check your order status! Could you please provide your order number?",
-        "Sure! Please share your order ID so I can look it up for you.",
-        "Let me check that for you. What's your order number?",
-        "Of course! I'll need your order number to pull up the details. Could you share it?"
+        "I'd be happy to check your order status! Could you please provide your order number? [CONTEXT:awaiting_order_number]",
+        "Sure! Please share your order ID so I can look it up for you. [CONTEXT:awaiting_order_number]",
+        "Let me check that for you. What's your order number? [CONTEXT:awaiting_order_number]",
+        "Of course! I'll need your order number to pull up the details. Could you share it? [CONTEXT:awaiting_order_number]"
       ]
     },
     {
@@ -119,7 +123,7 @@
         "You can track your order using the tracking link sent to your email. Need help finding it?",
         "To track your package, please visit our tracking page and enter your order number. Would you like the link?",
         "Sure! Once your order ships, you'll receive a tracking number via email. Have you received one?",
-        "I can help with tracking! Please share your order number and I'll get the latest updates for you."
+        "I can help with tracking! Please share your order number and I'll get the latest updates for you. [CONTEXT:awaiting_order_number]"
       ]
     },
     {
@@ -139,10 +143,10 @@
         "Cancel my recent order"
       ],
       "responses": [
-        "I can help you cancel your order. Could you provide the order number? Please note that orders can only be cancelled before they ship.",
-        "Sure, I'll help with the cancellation. What's your order number? Keep in mind there's a cancellation window before shipping.",
-        "I understand you'd like to cancel. Please share your order number and I'll check if it's still eligible for cancellation.",
-        "No problem! Please provide your order ID. If it hasn't shipped yet, we can process the cancellation right away."
+        "I can help you cancel your order. Could you provide the order number? Please note that orders can only be cancelled before they ship. [CONTEXT:awaiting_order_number]",
+        "Sure, I'll help with the cancellation. What's your order number? Keep in mind there's a cancellation window before shipping. [CONTEXT:awaiting_order_number]",
+        "I understand you'd like to cancel. Please share your order number and I'll check if it's still eligible for cancellation. [CONTEXT:awaiting_order_number]",
+        "No problem! Please provide your order ID. If it hasn't shipped yet, we can process the cancellation right away. [CONTEXT:awaiting_order_number]"
       ]
     },
     {
@@ -185,10 +189,10 @@
         "I want my money back"
       ],
       "responses": [
-        "I'll help you with the refund process. Once we receive the returned item, refunds are processed within 5-7 business days. Could you share your order number?",
+        "I'll help you with the refund process. Once we receive the returned item, refunds are processed within 5-7 business days. Could you share your order number? [CONTEXT:awaiting_order_number]",
         "Refunds are typically processed within 5-7 business days after we receive the item. Would you like to check the status of an existing refund?",
-        "I understand you'd like a refund. Please provide your order number so I can look into it. Refunds usually take 5-7 business days to appear in your account.",
-        "Sure! Let me help with that. Refunds are issued to the original payment method within 5-7 business days. What's your order number?"
+        "I understand you'd like a refund. Please provide your order number so I can look into it. Refunds usually take 5-7 business days to appear in your account. [CONTEXT:awaiting_order_number]",
+        "Sure! Let me help with that. Refunds are issued to the original payment method within 5-7 business days. What's your order number? [CONTEXT:awaiting_order_number]"
       ]
     },
     {
@@ -439,6 +443,210 @@
         "Hmm, I couldn't understand that. Could you provide more details about what you need help with?",
         "I apologize, but I'm not sure how to help with that. Could you try asking about orders, returns, shipping, or account issues?",
         "I didn't catch that. You can ask me about order tracking, returns, shipping, payments, or general support. How can I help?"
+      ]
+    },
+    {
+      "tag": "change_order",
+      "patterns": [
+        "Change my order",
+        "Can I update my order",
+        "I need to change my shipping address",
+        "Edit my order",
+        "Update items in order",
+        "I ordered the wrong size",
+        "Change color of item",
+        "Modify my order",
+        "I put the wrong address",
+        "Can I add something to my order",
+        "Change order details",
+        "Mistake in order"
+      ],
+      "responses": [
+        "I can help you update your order! Orders can be modified before they ship. Could you provide your order number? [CONTEXT:awaiting_order_number]",
+        "Sure, let's see if we can still change your order. What's your order number? [CONTEXT:awaiting_order_number]",
+        "I'd be happy to assist with modifying your order. Please share your order number so I can pull it up. [CONTEXT:awaiting_order_number]"
+      ]
+    },
+    {
+      "tag": "damaged_item",
+      "patterns": [
+        "My item arrived broken",
+        "Damaged product",
+        "Item is defective",
+        "I received a broken item",
+        "Product doesn't work",
+        "It came damaged",
+        "Missing parts",
+        "Something is broken",
+        "The item is damaged",
+        "Flawed product",
+        "Defective item received"
+      ],
+      "responses": [
+        "I'm so sorry to hear your item arrived damaged! Let's get this fixed. Could you please provide your order number? [CONTEXT:awaiting_order_number]",
+        "Oh no, I apologize for that! We'll make it right. What's your order number? [CONTEXT:awaiting_order_number]",
+        "I apologize that your item isn't in perfect condition. Please share your order number so we can process a replacement or refund. [CONTEXT:awaiting_order_number]"
+      ]
+    },
+    {
+      "tag": "missing_package",
+      "patterns": [
+        "Tracking says delivered but I didn't get it",
+        "Missing package",
+        "Where is my package it says delivered",
+        "I never received my order",
+        "Package lost",
+        "Didn't receive item",
+        "Order not delivered",
+        "Stolen package",
+        "Can't find my package",
+        "Delivery missing"
+      ],
+      "responses": [
+        "I'm sorry to hear your package is missing! Sometimes carriers mark items as delivered up to 24 hours early. Have you checked with neighbors or your leasing office?",
+        "Oh no! Packages are occasionally marked as delivered a bit early. We recommend waiting one more business day. If it doesn't show up, let us know!",
+        "I apologize for the missing package. Please double-check around your property and with neighbors. If it's still missing tomorrow, we will launch an investigation with the carrier."
+      ]
+    },
+    {
+      "tag": "promo_code",
+      "patterns": [
+        "How to use promo code",
+        "Promo code not working",
+        "Discount code invalid",
+        "Coupon code help",
+        "Where do I enter my coupon",
+        "My discount isn't applying",
+        "Can I use two promo codes",
+        "Promo code expired",
+        "Coupon not working",
+        "Help with discount",
+        "I forgot to apply my discount"
+      ],
+      "responses": [
+        "Promo codes can be entered at checkout in the 'Discount Code' box. Keep in mind that only one code can be used per order, and some items may be excluded.",
+        "If your promo code isn't working, please ensure it hasn't expired and that your items are eligible. We can only accept one discount per order.",
+        "You can apply your coupon during checkout. If you forgot to add it to a recent order, please provide your order number and the code, and we'll see if we can apply it retroactively!"
+      ]
+    },
+    {
+      "tag": "payment_methods",
+      "patterns": [
+        "Do you accept PayPal",
+        "Can I use Apple Pay",
+        "What payment methods do you take",
+        "How can I pay",
+        "Do you take Discover",
+        "Payment options",
+        "Can I pay with crypto",
+        "Accepted credit cards",
+        "Do you have Afterpay",
+        "Klarna payment"
+      ],
+      "responses": [
+        "We accept all major credit cards (Visa, Mastercard, Amex, Discover), as well as PayPal, Apple Pay, and Google Pay.",
+        "You can pay using Visa, Mastercard, American Express, PayPal, and Apple Pay. We also offer buy-now-pay-later options via Klarna and Afterpay at checkout!",
+        "Our payment options include all major credit/debit cards, PayPal, and digital wallets like Apple Pay and Google Pay."
+      ]
+    },
+    {
+      "tag": "warranty_info",
+      "patterns": [
+        "Is there a warranty",
+        "How long is the guarantee",
+        "Warranty information",
+        "Does this have a warranty",
+        "How to claim warranty",
+        "Warranty period",
+        "Is this guaranteed",
+        "What does the warranty cover",
+        "Lifetime warranty",
+        "Broken under warranty"
+      ],
+      "responses": [
+        "Most of our products come with a 1-year limited warranty covering manufacturing defects. Would you like to start a warranty claim?",
+        "We offer a 1-year warranty on our products against defects in materials and workmanship. Normal wear and tear is not covered.",
+        "Our standard warranty is 1 year from the date of purchase. If you have a defective item under warranty, please let me know!"
+      ]
+    },
+    {
+      "tag": "store_location",
+      "patterns": [
+        "Do you have a physical store",
+        "Where are you located",
+        "Store location",
+        "Can I pick up my order",
+        "Are you an online only store",
+        "Where is your shop",
+        "Find a store near me",
+        "Store address",
+        "Visit your store",
+        "Do you have retail locations"
+      ],
+      "responses": [
+        "We are primarily an online retailer, but we do have a few flagship stores! You can find our store locator link at the bottom of our website.",
+        "Our main operations are online, but we have physical locations in select major cities. Check our 'Find a Store' page for addresses and hours!",
+        "Currently, we operate almost entirely online to bring you the best prices, but we ship nationwide!"
+      ]
+    },
+    {
+      "tag": "subscription_help",
+      "patterns": [
+        "Cancel my subscription",
+        "Pause auto renew",
+        "Manage my monthly box",
+        "Stop subscription",
+        "Update subscription billing",
+        "Change subscription frequency",
+        "Cancel monthly plan",
+        "How does the subscription work",
+        "Skip a month",
+        "Subscription settings"
+      ],
+      "responses": [
+        "You can easily manage, pause, or cancel your subscription by logging into your account and navigating to the 'Subscriptions' tab.",
+        "To update or cancel your subscription, please log into your account dashboard. You can skip a delivery or cancel anytime before your next billing date.",
+        "Subscription settings can be found in your account under 'Manage Subscriptions'. Let me know if you're having trouble logging in!"
+      ]
+    },
+    {
+      "tag": "size_guide",
+      "patterns": [
+        "Do your clothes run small",
+        "Where is the size chart",
+        "Size guide",
+        "How do the sizes run",
+        "What size should I get",
+        "Is this true to size",
+        "Sizing information",
+        "Fit guide",
+        "I need help with sizing",
+        "Measurements"
+      ],
+      "responses": [
+        "Most of our items fit true to size! You can find a detailed size chart and fit guide on every product page just below the size selection buttons.",
+        "We recommend checking the 'Size Guide' link on the product page for exact measurements. If you're between sizes, we usually suggest sizing up!",
+        "Our sizing is standard, but some items have unique fits. Please refer to the specific size chart on the item's page for the most accurate measurements."
+      ]
+    },
+    {
+      "tag": "out_of_stock",
+      "patterns": [
+        "When will this restock",
+        "Out of stock item",
+        "Notify me when available",
+        "Is this coming back",
+        "Will you restock this",
+        "Sold out",
+        "When is it back in stock",
+        "I want to buy a sold out item",
+        "Restock date",
+        "Item unavailable"
+      ],
+      "responses": [
+        "We typically restock popular items every 2-3 weeks! You can enter your email on the product page to be notified the moment it's back in stock.",
+        "If an item is sold out, we highly recommend using the 'Notify Me' button on the product page. We'll email you as soon as it's available again!",
+        "Restock dates vary, but you can sign up for back-in-stock email alerts directly on the product page so you don't miss out."
       ]
     }
   ]
