@@ -670,7 +670,6 @@
         "i want to close",
         "no more help needed",
         "that's all",
-        "yes close it",
         "close it",
         "end session"
       ],
@@ -693,6 +692,36 @@
       ],
       "responses": [
         "I can certainly help with your order. Could you tell me more about the issue? For example, is it a missing package, a damaged item, or do you need to cancel or change your order?"
+      ]
+    },
+    {
+      "tag": "affirmative",
+      "patterns": [
+        "yes",
+        "yeah",
+        "yep",
+        "correct",
+        "exactly",
+        "that's right",
+        "yes please"
+      ],
+      "responses": [
+        "Got it! How else can I assist you?",
+        "Okay, I understand. Is there anything else you need?"
+      ]
+    },
+    {
+      "tag": "negative",
+      "patterns": [
+        "no",
+        "nope",
+        "not really",
+        "incorrect",
+        "no thanks"
+      ],
+      "responses": [
+        "Okay, let me know if you need anything else!",
+        "I see. Feel free to ask if you have more questions."
       ]
     }
   ]
